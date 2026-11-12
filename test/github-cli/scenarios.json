@@ -1,0 +1,41 @@
+{
+    "root_user": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "github-cli": {}
+        },
+        "remoteUser": "root"
+    },
+    "pinned_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "github-cli": {
+                "version": "2.103.3"
+            }
+        }
+    },
+    "debian": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "github-cli": {}
+        }
+    },
+    "alpine": {
+        "image": "mcr.microsoft.com/devcontainers/base:alpine",
+        "features": {
+            "github-cli": {}
+        }
+    },
+    "fedora": {
+        "image": "fedora:latest",
+        "features": {
+            "github-cli": {}
+        }
+    },
+    "rocky_linux": {
+        "image": "rockylinux:9",
+        "features": {
+            "github-cli": {}
+        }
+    }
+}
