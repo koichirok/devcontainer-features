@@ -34,4 +34,4 @@ OS: Linux distributions such as Ubuntu, Debian, Alpine, Fedora, and Rocky Linux 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/koichirok/devcontainer-features/blob/main/src/github-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
