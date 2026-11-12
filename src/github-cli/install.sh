@@ -93,12 +93,13 @@ install_github_cli() {
     esac
 
     if [ "$version" = "latest" ]; then
-        release=$(curl -fsSL --retry 3 \
-            "https://api.github.com/repos/cli/cli/releases/latest")
-        version=$(printf '%s\n' "$release" |
-            sed -n 's/^[[:space:]]*"tag_name"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p')
+        # Resolve the latest version from the release page redirect instead of
+        # the GitHub API, which is rate-limited for unauthenticated requests
+        effective_url=$(curl -fsSLI --retry 3 -o /dev/null -w '%{url_effective}' \
+            "https://github.com/cli/cli/releases/latest")
+        version=${effective_url##*/}
         version=${version#v}
-        if [ -z "$version" ]; then
+        if [ -z "$version" ] || [ "$version" = "latest" ]; then
             fatal "Unable to determine the latest GitHub CLI release version"
         fi
     else
