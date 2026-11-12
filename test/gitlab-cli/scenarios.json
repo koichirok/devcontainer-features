@@ -1,0 +1,41 @@
+{
+    "root_user": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "gitlab-cli": {}
+        },
+        "remoteUser": "root"
+    },
+    "pinned_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "gitlab-cli": {
+                "version": "1.130.0"
+            }
+        }
+    },
+    "debian": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "gitlab-cli": {}
+        }
+    },
+    "alpine": {
+        "image": "mcr.microsoft.com/devcontainers/base:alpine",
+        "features": {
+            "gitlab-cli": {}
+        }
+    },
+    "fedora": {
+        "image": "fedora:latest",
+        "features": {
+            "gitlab-cli": {}
+        }
+    },
+    "rocky_linux": {
+        "image": "rockylinux:9",
+        "features": {
+            "gitlab-cli": {}
+        }
+    }
+}
